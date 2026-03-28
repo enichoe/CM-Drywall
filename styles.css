@@ -4,7 +4,7 @@
             --bg-secondary: #081D33; /* Dark Navy-ish background for depth */
             --fg: #F5F5F5;
             --muted: #9CA3AF;
-            --accent: #0B3B70; /* Brand Navy Blue */
+            --accent: #4f91d8; /* Brand Navy Blue #0B3B70*/
             --accent-dark: #082C54;
             --card: #142841; /* Slightly lighter navy for cards */
             --border: #1E3A5F;
@@ -36,9 +36,18 @@
         
         /* Background Patterns */
         .hero-bg {
-            background: linear-gradient(135deg, rgba(13,13,13,0.95) 0%, rgba(26,26,26,0.9) 50%, rgba(13,13,13,0.95) 100%),
-                        url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1920&q=80') center/cover;
+            background: linear-gradient(135deg, rgba(13,13,13,0.98) 0%, rgba(26,26,26,0.9) 50%, rgba(13,13,13,0.98) 100%),
+                        url('logo.jpeg') no-repeat center center / contain;
+            background-color: var(--bg);
+            transition: background 0.3s ease;
         }
+
+        @media (max-width: 768px) {
+            .hero-bg {
+                background-size: 85% auto; /* Adds a bit of padding on mobile for better aesthetics */
+            }
+        }
+
         
         .grid-pattern {
             background-image: 
